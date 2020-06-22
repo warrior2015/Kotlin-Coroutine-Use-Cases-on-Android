@@ -11,6 +11,7 @@ import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase13
 import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase14.ContinueCoroutineWhenUserLeavesScreenActivity
 import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase15.WorkManagerActivity
 import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase16.PerformanceAnalysisActivity
+import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase17.PerformCalculationOnMainThreadActivity
 import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase2.Perform2SequentialNetworkRequestsActivity
 import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase2.callbacks.SequentialNetworkRequestsCallbacksActivity
 import com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase2.rx.SequentialNetworkRequestsRxActivity
@@ -56,6 +57,8 @@ const val useCase14Description = "#14 Continue Coroutine when User leaves screen
 const val useCase15Description = "#15 Using WorkManager with Coroutines"
 const val useCase16Description =
     "#16 Performance Analysis of dispatchers, number of coroutines and yielding"
+const val useCase17Description =
+    "#17 Perform heavy calculation on Main Thread without freezing the UI"
 
 private val coroutinesUseCases =
     UseCaseCategory(
@@ -137,6 +140,10 @@ private val coroutinesUseCases =
             UseCase(
                 useCase16Description,
                 PerformanceAnalysisActivity::class.java
+            ),
+            UseCase(
+                useCase17Description,
+                PerformCalculationOnMainThreadActivity::class.java
             )
         )
     )
